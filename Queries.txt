@@ -15,7 +15,7 @@ Ans - SELECT * FROM emp WHERE Hiredate<'1981-01-01';
 
 
 Q5 - List the Empno, Ename, Sal, Daily sal of all emps in the asc order of Annsal. 
-Ans - SELECT Empno,Ename,Sal,Comm FROM emp ORDER BY Sal;
+Ans - SELECT Empno,Ename,Sal,Comm,sal/365 AS dailysal,sal*12 AS annsal FROM emp ORDER BY annsal;
 
 Q6 - List the Empno, Ename, Sal, Exp of all emps working for Mgr 7698.
 Ans - SELECT Empno,Ename,Sal FROM emp WHERE Mgr=7698;
@@ -27,7 +27,7 @@ Q8 - List the emps who are either ‘CLERK’ or ‘ANALYST’ in the Desc order
 Ans - SELECT * FROM emp WHERE Job="CLERK" OR Job="ANALYST" ORDER BY Job DESC;
 
 Q9 - List the emps Who Annual sal ranging from 22000 and 45000.
-Ans - No Column Annual Sal.
+Ans - Select * from emp where Sal*12 BETWEEN 22000 AND 45000;
 
 Q10 - List the Enames those are starting with ‘S’ and with five characters.
 Ans - SELECT * FROM emp WHERE Ename LIKE "%s____";
