@@ -79,7 +79,11 @@ Q23 - List the emps whose sal greater than Blake’s sal.
 Ans - SELECT * FROM emp WHERE Sal>2850;
 
 Q24 - Create view v1 to select ename, job, dname, loc whose deptno are same.
-Ans - 
+Ans - CREATE
+    VIEW `assignment`.`v1` 
+    AS
+(SELECT Ename, Job, Dname,Loc FROM emp e JOIN dept d ON e.Deptno = d.Deptno );
+
 
 Q25 - Create a procedure with dno as input parameter to fetch ename and dname. 
 Ans - DELIMITER $$
