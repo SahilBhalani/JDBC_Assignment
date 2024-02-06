@@ -100,6 +100,22 @@ call dno(10);
 Q26 - Add column Pin with bigint data type in table student.
 Ans - ALTER TABLE student ADD COLUMN phno INT;
 
+Q27 - Modify the student table to change the sname length from 14 to 40. Create 
+trigger to insert data in emp_log table whenever any update of sal in EMP table. 
+You can set action as ‘New Salary’. 
+Ans-DELIMITER $$
+
+CREATE
+    /*[DEFINER = { user | CURRENT_USER }]*/
+    TRIGGER `assignment`.`NewSalary` BEFORE UPDATE
+    ON `assignment`.`emp`
+    FOR EACH ROW BEGIN
+    INSERT INTO emplog(New_Salary) VALUE(old.Sal); 
+
+    END$$
+
+DELIMITER ;
+
 
 
 
