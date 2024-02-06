@@ -82,7 +82,20 @@ Q24 - Create view v1 to select ename, job, dname, loc whose deptno are same.
 Ans - 
 
 Q25 - Create a procedure with dno as input parameter to fetch ename and dname. 
-Ans - 
+Ans - DELIMITER $$
+
+CREATE
+    
+    PROCEDURE `assignment`.`dno`(IN Deptno INT)
+    
+	BEGIN
+		SELECT Ename,Dname FROM emp e JOIN dept d ON e.Deptno=d.Deptno; 
+	END$$
+
+DELIMITER ;
+
+
+call dno(10);
 
 Q26 - Add column Pin with bigint data type in table student.
 Ans - ALTER TABLE student ADD COLUMN phno INT;
