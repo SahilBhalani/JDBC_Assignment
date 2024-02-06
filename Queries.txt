@@ -51,7 +51,7 @@ Ans - SELECT * FROM emp WHERE Sal IN (SELECT Sal FROM emp WHERE Ename = "FORD" O
 
 
 Q16 - List the emps whose jobs same as SMITH or ALLEN.
-Ans - SELECT * FROM emp WHERE Job IN (SELECT Job FROM emp WHERE Ename="FORD" OR Ename="SMITH");
+Ans - SELECT * FROM emp WHERE Job IN (SELECT Job FROM emp WHERE Ename="ALLEN" OR Ename="SMITH");
 
 
 Q17 - Any jobs of deptno 10 those that are not found in deptno 20. 
